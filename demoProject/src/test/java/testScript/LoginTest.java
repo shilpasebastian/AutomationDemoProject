@@ -12,7 +12,7 @@ public class LoginTest extends Base{
 	
 	@Test
 	
-	public void loginTestWithCorrectUsernameAndPassword() throws IOException {
+	public void verifyTheUserIsAbleToLoginUsingValidCredentials() throws IOException {
 		
 //		String user_name="admin";   //----------->is called credentials
 //		String password="admin";	
@@ -29,7 +29,7 @@ public class LoginTest extends Base{
 	
 	@Test
 	
-	public void loginTestWithWrongUserName() throws IOException {
+	public void verifyTheUserIsUnableToLoginUsingInvalidUserNameAndValidPassword() throws IOException {
 			
 		String user_name=ExcelUtility.getStringData(3, 0, "loginpage");
 		String password=ExcelUtility.getStringData(3,1, "loginpage");
@@ -44,7 +44,7 @@ public class LoginTest extends Base{
 	
 	@Test
 	
-	public void loginTestWithWrongPassword() throws IOException {
+	public void verifyTheUserIsUnableToLoginUsingValidUserNameAndInvalidPassword() throws IOException {
 		
 		String user_name=ExcelUtility.getStringData(2, 0, "loginpage");
 		String password=ExcelUtility.getStringData(2, 1, "loginpage");
@@ -58,7 +58,7 @@ public class LoginTest extends Base{
 	
 	@Test
 	
-	public void loginTestWithWrongUsernameAndPassword() throws IOException {
+	public void verifyTheUserIsAbleToLoginUsingInvalidCredentials() throws IOException {
 		
 		String user_name=ExcelUtility.getStringData(4, 0, "loginpage");
 		String password=ExcelUtility.getStringData(4, 1, "loginpage");

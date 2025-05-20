@@ -21,6 +21,7 @@ public class ManageNewsPage {
 	@FindBy(xpath ="//button[@type='submit']") WebElement saveBtn;
 	@FindBy(xpath ="//button[@data-dismiss='alert']") WebElement alert;
 
+
 	public void clickManageNewsOption() {
 	
 	manageNewsOPtion.click();
