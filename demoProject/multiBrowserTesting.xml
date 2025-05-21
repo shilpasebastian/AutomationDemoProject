@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MultiBrowserTesting" parallel="tests" thread-count="5"> <!-- thread-cound means number of thread counds-->
+																	<!-- parallel means parllely run multiple test cases-->
+  <test name="ChromeTest">
+  <parameter name="browser" value="chrome"></parameter>
+    <classes>
+      <class name="testScript.ManageNewsTest"/>
+    </classes>
+  </test> <!-- Test -->
+   <test name="EdgeTest">
+   <parameter name="browser" value="edge"></parameter>
+    <classes>
+      <class name="testScript.ManageNewsTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+<!-- NOTE-->
+<!-- cross browser testing done using parameter consept-->

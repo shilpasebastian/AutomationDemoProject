@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
+
 public class AdminUserPage {
 	
 	WebDriver driver;
@@ -23,6 +25,8 @@ public class AdminUserPage {
 	@FindBy(xpath="//select[contains(@class,'form-control') and contains(@id,'user_type')]") WebElement userType_ddl;
 	@FindBy(xpath="//button[@name='Create']") WebElement save_btn;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']") WebElement alert_box;
+	
+	PageUtility page_utility=new PageUtility();
 	
 		
 	public void clickMoreInfo() {
@@ -47,8 +51,7 @@ public class AdminUserPage {
 	
 	public void selectUserTypeDropDwon(String value) {
 		
-		Select select=new Select(userType_ddl);
-		select.selectByValue(value);
+		page_utility.selectByVisibleValue(userType_ddl, value);
 		
 	}
 	
