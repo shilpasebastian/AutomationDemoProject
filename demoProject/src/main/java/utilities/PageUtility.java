@@ -92,28 +92,4 @@ public class PageUtility {
 		js.executeScript(value,element);
 	}
 	
-	//Wait methods
-	
-	public void implicityWait(WebDriver driver,int seconds) {
-		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(seconds));
-	}
-	
-	public void explicitWait(WebDriver driver,int seconds,WebElement element) {
-		
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(seconds));
-		wait.until(ExpectedConditions.elementToBeClickable(element));
-
-	}
-	
-	public void fluentWait(WebDriver driver,int totalSeconds,int polling,WebElement element) {
-		
-		Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(totalSeconds))
-				.pollingEvery(Duration.ofSeconds(polling))
-				.ignoring(NoSuchElementException.class);
-				fluentWait.until(ExpectedConditions.elementToBeClickable(element));
-
-	}
-	
 }

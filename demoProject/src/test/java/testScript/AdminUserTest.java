@@ -8,10 +8,11 @@ import org.testng.annotations.Test;
 import pages.AdminUserPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUserTest extends Base{
 	
-	@Test
+	@Test(retryAnalyzer = reTry.ReTry.class)
 	
 	public void adminUserTest() throws IOException {
 		
@@ -22,8 +23,13 @@ public class AdminUserTest extends Base{
 		login_page.enterPassword(password);
 		login_page.clickTheSignInButton();
 		
-		String username_AdminUserTest=ExcelUtility.getStringData(0, 1, "adminuser");
-		String password_AdminUserTest=ExcelUtility.getIntegerData(1, 1, "adminuser");
+//		String username_AdminUserTest=ExcelUtility.getStringData(0, 1, "adminuser");
+//		String password_AdminUserTest=ExcelUtility.getIntegerData(1, 1, "adminuser");
+		
+		FakerUtility faker_utility=new FakerUtility();
+		String username_AdminUserTest=faker_utility.creatARandomFirstName();
+		String password_AdminUserTest=faker_utility.creatARandomLastName();
+		
 		String userType=ExcelUtility.getStringData(2, 1, "adminuser");
 		AdminUserPage admin_user_page=new AdminUserPage(driver);
 		admin_user_page.clickMoreInfo();

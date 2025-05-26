@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="MultiBrowserTesting" parallel="tests" thread-count="5"> <!--
+<suite name="Parallel_Testing_Test" parallel="tests" thread-count="5"> <!--
 	thread-cound means number of thread counds-->
+	<listeners>
+		<listener class-name="generateReport.Listener"></listener>
+	</listeners>
 	<parameter name="browser" value="chrome"></parameter>
 	<test name="Test1">
 		<classes>
