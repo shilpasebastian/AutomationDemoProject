@@ -1,7 +1,9 @@
 package testScript;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,6 +16,7 @@ import org.testng.annotations.Parameters;
 
 import com.beust.jcommander.Parameter;
 
+import constant.Constants;
 import utilities.ScreenShortUtility;
 import utilities.WaitUtility;
 
@@ -21,6 +24,8 @@ public class Base {
 	
 	public WebDriver driver;
 	public ScreenShortUtility scrshot;
+	public FileInputStream referenceVariable;
+	public Properties properties;
 
 	
 	@BeforeMethod(alwaysRun = true)
@@ -36,9 +41,21 @@ public class Base {
 //	}
 	
 	public void initializeBrowser(String browser) throws Exception {
-//		the value from crossbrowser is assigned to browser
+				
+		try { 
+			
+			properties=new Properties();
+			referenceVariable=new FileInputStream(Constants.CONFIGFILE);
+			properties.load(referenceVariable);//load the url
+			
+		}catch (Exception e) {
+			
+			System.out.println("Invalid URL");
+			
+		}
 		
-//		driver=new ChromeDriver();
+//		the value from crossbrowser is assigned to browser
+
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 			

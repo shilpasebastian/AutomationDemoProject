@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-26T21:10:50 IST" name="RegressionTesting" finished-at="2025-05-26T21:10:56 IST" duration-ms="6610">
+    <groups>
+      <group name="regression">
+        <method signature="LoginTest.verifyTheUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testScript.LoginTest@4ee203eb]" name="verifyTheUserIsAbleToLoginUsingValidCredentials" class="testScript.LoginTest"/>
+      </group> <!-- regression -->
+    </groups>
+    <test started-at="2025-05-26T21:10:50 IST" name="ChromeTest" finished-at="2025-05-26T21:10:56 IST" duration-ms="6610">
+      <class name="testScript.LoginTest">
+        <test-method is-config="true" signature="initializeBrowser(java.lang.String)[pri:0, instance:testScript.LoginTest@4ee203eb]" started-at="2025-05-26T21:10:50 IST" name="initializeBrowser" finished-at="2025-05-26T21:10:54 IST" duration-ms="3988" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyTheUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testScript.LoginTest@4ee203eb]" started-at="2025-05-26T21:10:54 IST" name="verifyTheUserIsAbleToLoginUsingValidCredentials" finished-at="2025-05-26T21:10:56 IST" duration-ms="2199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheUserIsAbleToLoginUsingValidCredentials -->
+        <test-method is-config="true" signature="driverQuit(org.testng.ITestResult)[pri:0, instance:testScript.LoginTest@4ee203eb]" started-at="2025-05-26T21:10:56 IST" name="driverQuit" finished-at="2025-05-26T21:10:56 IST" duration-ms="362" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheUserIsAbleToLoginUsingValidCredentials status=SUCCESS method=LoginTest.verifyTheUserIsAbleToLoginUsingValidCredentials()[pri:0, instance:testScript.LoginTest@4ee203eb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuit -->
+      </class> <!-- testScript.LoginTest -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- RegressionTesting -->
+</testng-results>
